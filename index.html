@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>hotairballoon</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav-bar">
+            <nav>
+                <div class="logo">
+                    <img src="assets/img/logo.png" alt="logo">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li class="active"><a href="">Home</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icons">
+                    <img src="assets/img/menu.png" alt="">
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="social-icons">
+                <img src="assets/img/instagram.png" alt="">
+                <img src="assets/img/facebook.png" alt="">
+                <img src="assets/img/twitter.png" alt="">
+                <img src="assets/img/youtube.png" alt="">
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <img src="assets/img/search.png" alt="">
+            </div>
+        </div>
+
+        <img src="assets/img/cloud.png" id="clouds">
+        <img src="assets/img/plane.png" id="airplane">
+        <div id="hotairballoon">
+            <img src="assets/img/balloon.png" class="balloon-1">
+            <img src="assets/img/balloon.png" class="balloon-2">
+            <img src="assets/img/balloon.png" class="balloon-3">
+        </div>
+        <img src="assets/img/pause.png" id="myImg">
+    </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+        myImg.onclick = function () {
+            if (clouds.style.webkitAnimatonPlayState == "paused") {
+                clouds.style.webkitAnimatonPlayState = "running";
+                hotairballoon.style.webkitAnimatonPlayState = "running";
+                airplane.style.webkitAnimatonPlayState = "running";
+                myImg.src = "assets/img/pause.png"
+            }
+            else {
+                clouds.style.webkitAnimatonPlayState = "paused";
+                hotairballoon.style.webkitAnimatonPlayState = "paused";
+                airplane.style.webkitAnimatonPlayState = "paused";
+                myImg.src = "assets/img/play.png"
+            }
+        }  
+    </script>
+</body>
+
+</html>
